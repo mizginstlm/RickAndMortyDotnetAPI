@@ -9,5 +9,5 @@ public class Character
     public string CharacterSurname { get; set; } = null!;
     public int CharacterAge { get; set; }
     public string Role { get; set; } = null!;
-    public List<Episode> Episodes { get; set; } = new();
+    public List<Episode> Episode { get; set; } = new();
 }

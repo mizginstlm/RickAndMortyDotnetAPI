@@ -136,3 +136,4 @@
 /Users/princessbuttercup/Documents/RickNMortyDotnetApi/bin/Debug/net8.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
 /Users/princessbuttercup/Documents/RickNMortyDotnetApi/bin/Debug/net8.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
 /Users/princessbuttercup/Documents/RickNMortyDotnetApi/obj/Debug/net8.0/RickNMor.DD72010B.Up2Date
+/Users/princessbuttercup/Documents/RickNMortyDotnetApi/obj/Debug/net8.0/RickNMortyDotnetApi.sourcelink.json

@@ -12,8 +12,8 @@ using RickNMortyDotnetApi.Data;
 namespace RickNMortyDotnetApi.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240309083821_Initial")]
-    partial class Initial
+    [Migration("20240309102728_CharacterEdit2")]
+    partial class CharacterEdit2
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -30,12 +30,12 @@ namespace RickNMortyDotnetApi.Migrations
                     b.Property<int>("CharactersId")
                         .HasColumnType("int");
 
-                    b.Property<int>("EpisodesId")
+                    b.Property<int>("EpisodeId")
                         .HasColumnType("int");
 
-                    b.HasKey("CharactersId", "EpisodesId");
+                    b.HasKey("CharactersId", "EpisodeId");
 
-                    b.HasIndex("EpisodesId");
+                    b.HasIndex("EpisodeId");
 
                     b.ToTable("CharacterEpisode");
                 });
@@ -105,7 +105,7 @@ namespace RickNMortyDotnetApi.Migrations
 
                     b.HasOne("RickNMortyDotnetApi.Models.Episodes.Episode", null)
                         .WithMany()
-                        .HasForeignKey("EpisodesId")
+                        .HasForeignKey("EpisodeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

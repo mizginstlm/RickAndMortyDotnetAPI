@@ -30,4 +30,12 @@ public class EpisodeController
         return Ok(_episodeService.GetEpisodeById(id));
     }
 
+    [HttpGet("{id}/characters")]
+    public ActionResult<Episode> GetAllCharactersInEpisodes(int id)
+    {
+        return Ok(_episodeService.GetAllCharactersInEpisodes(id));
+    }
+
+
+
 }

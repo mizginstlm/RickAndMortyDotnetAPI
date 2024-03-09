@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RickNMortyDotnetApi.Data;
 
@@ -11,9 +12,11 @@ using RickNMortyDotnetApi.Data;
 namespace RickNMortyDotnetApi.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240309085553_Initial")]
+    partial class Initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -27,12 +30,12 @@ namespace RickNMortyDotnetApi.Migrations
                     b.Property<int>("CharactersId")
                         .HasColumnType("int");
 
-                    b.Property<int>("EpisodeId")
+                    b.Property<int>("EpisodesId")
                         .HasColumnType("int");
 
-                    b.HasKey("CharactersId", "EpisodeId");
+                    b.HasKey("CharactersId", "EpisodesId");
 
-                    b.HasIndex("EpisodeId");
+                    b.HasIndex("EpisodesId");
 
                     b.ToTable("CharacterEpisode");
                 });
@@ -102,7 +105,7 @@ namespace RickNMortyDotnetApi.Migrations
 
                     b.HasOne("RickNMortyDotnetApi.Models.Episodes.Episode", null)
                         .WithMany()
-                        .HasForeignKey("EpisodeId")
+                        .HasForeignKey("EpisodesId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

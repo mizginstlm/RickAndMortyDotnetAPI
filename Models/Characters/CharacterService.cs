@@ -4,20 +4,20 @@ namespace RickNMortyDotnetApi.Models.Characters;
 
 public class CharacterService : ICharacterService
 {
-    private readonly ICharacterRepository characterRepository;
+    private readonly ICharacterRepository _characterRepository;
     private readonly IMapper _mapper;
 
-    public CharacterService(IMapper mapper)
+    public CharacterService(IMapper mapper, ICharacterRepository characterRepository)
     {
         _mapper = mapper;
-        characterRepository = new CharacterRepository();
+        _characterRepository = characterRepository;
     }
 
 
     public ResponseService<List<GetCharacterDto>> GetAllCharacters()
     {
         var responseService = new ResponseService<List<GetCharacterDto>>();
-        List<Character> Characters = characterRepository.GetAllCharacters();
+        List<Character> Characters = _characterRepository.GetAllCharacters();
         responseService.Data = _mapper.Map<List<GetCharacterDto>>(Characters);
         return responseService;
     }
@@ -25,7 +25,7 @@ public class CharacterService : ICharacterService
     public ResponseService<GetCharacterDto> GetCharacterById(int id)
     {
         var responseService = new ResponseService<GetCharacterDto>();
-        var character = characterRepository.GetCharacterById(id);
+        var character = _characterRepository.GetCharacterById(id);
         responseService.Data = _mapper.Map<GetCharacterDto>(character);
         return responseService;
     }
