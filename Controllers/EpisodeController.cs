@@ -8,7 +8,7 @@ namespace RickNMortyDotnetApi.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-[Authorize]
+
 public class EpisodeController
 : ControllerBase
 {
@@ -27,7 +27,7 @@ public class EpisodeController
     }
 
     [HttpGet("{id}")]
-    public ActionResult<List<Episode>> GetSingle(List<int> id)
+    public ActionResult<List<Episode>> GetSingle([FromQuery] List<int> id)
     {
         return Ok(_episodeService.GetEpisodeById(id));
     }

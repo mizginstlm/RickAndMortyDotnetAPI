@@ -26,5 +26,11 @@ Use commands in NuGet website to install packages or some libraries.
 
 
 Links:
-http://localhost:5265/api/Characters?id=1&id=2 //you change port according your device
+
+http://localhost:5265/api/Characters?id=1&id=2 //you can change port according your device
 http://localhost:5265/api/Characters 
+http://localhost:5265/api/Characters?pageNumber=1&pageSize=10
+http://localhost:5265/api/Episode
+http://localhost:5265/api/Episode/1?id=1
+http://localhost:5265/api/Episode/1?id=1&id=2
+http://localhost:5265/api/Episode/1/characters?pageNumber=1&pageSize=100
