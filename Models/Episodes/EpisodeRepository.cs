@@ -20,15 +20,17 @@ public class EpisodeRepository : IEpisodeRepository
         return Episodes;
     }
 
-    public Episode GetEpisodeById(int id)
+    public List<Episode> GetEpisodeById(List<int> id)
     {
-        var episode = _context.Episode.FirstOrDefault(e => e.Id == id);
-        if (episode is not null)
-            return episode;
+        var episodes = _context.Episode
+                .Where(e => id.Contains(e.Id))
+                .ToList();
+        return episodes;
 
         throw new Exception($"Episode with ID {id} not found");
 
     }
+
 
     public List<Character> GetAllCharactersInEpisodes(int id)
     {

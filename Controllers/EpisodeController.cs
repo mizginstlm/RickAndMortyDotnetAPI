@@ -1,4 +1,5 @@
 
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using RickNMortyDotnetApi.Models;
 using RickNMortyDotnetApi.Models.Episodes;
@@ -7,6 +8,7 @@ namespace RickNMortyDotnetApi.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
+[Authorize]
 public class EpisodeController
 : ControllerBase
 {
@@ -25,15 +27,15 @@ public class EpisodeController
     }
 
     [HttpGet("{id}")]
-    public ActionResult<Episode> GetSingle(int id)
+    public ActionResult<List<Episode>> GetSingle(List<int> id)
     {
         return Ok(_episodeService.GetEpisodeById(id));
     }
 
     [HttpGet("{id}/characters")]
-    public ActionResult<Episode> GetAllCharactersInEpisodes(int id)
+    public ActionResult<Episode> GetAllCharactersInEpisodes(int id, int pageNumber = 1, int pageSize = 1000)
     {
-        return Ok(_episodeService.GetAllCharactersInEpisodes(id));
+        return Ok(_episodeService.GetAllCharactersInEpisodes(id, pageNumber, pageSize));
     }
 
 

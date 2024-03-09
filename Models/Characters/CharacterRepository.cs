@@ -6,23 +6,20 @@ namespace RickNMortyDotnetApi.Models.Characters;
 
 public class CharacterRepository(AppDbContext context) : ICharacterRepository
 {
-
     private readonly AppDbContext _context = context;
-
-
-
-
     public List<Character> GetAllCharacters()
     {
         var Characters = _context.Characters.ToList();
         return Characters;
     }
 
-
-    public Character GetCharacterById(int id)
+    public List<Character> GetCharacterById(List<int> id)
     {
-        var character = _context.Characters.FirstOrDefault(c => c.Id == id);
-        return character;
+
+        var characters = _context.Characters
+                .Where(e => id.Contains(e.Id))
+                .ToList();
+        return characters;
 
         throw new Exception($"Character with ID {id} not found");
 

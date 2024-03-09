@@ -3,6 +3,6 @@
 public interface ICharacterRepository
 {
     List<Character> GetAllCharacters();
-    Character GetCharacterById(int id);
+    List<Character> GetCharacterById(List<int> id);
 
 }

@@ -137,3 +137,6 @@
 /Users/princessbuttercup/Documents/RickNMortyDotnetApi/bin/Debug/net8.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
 /Users/princessbuttercup/Documents/RickNMortyDotnetApi/obj/Debug/net8.0/RickNMor.DD72010B.Up2Date
 /Users/princessbuttercup/Documents/RickNMortyDotnetApi/obj/Debug/net8.0/RickNMortyDotnetApi.sourcelink.json
+/Users/princessbuttercup/Documents/RickNMortyDotnetApi/bin/Debug/net8.0/Scrutor.dll
+/Users/princessbuttercup/Documents/RickNMortyDotnetApi/bin/Debug/net8.0/Swashbuckle.AspNetCore.Filters.dll
+/Users/princessbuttercup/Documents/RickNMortyDotnetApi/bin/Debug/net8.0/Swashbuckle.AspNetCore.Filters.Abstractions.dll

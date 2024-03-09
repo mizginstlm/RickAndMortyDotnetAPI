@@ -6,6 +6,6 @@ public interface IEpisodeRepository
 {
     List<Character> GetAllCharactersInEpisodes(int id);
     List<Episode> GetAllEpisodes();
-    Episode GetEpisodeById(int id);
+    List<Episode> GetEpisodeById(List<int> id);
 
 }

@@ -23,3 +23,8 @@ To run and build API I used "dotnet watch run" command in macos. But before thes
 When developing in macos sometimes vscode doesnt integrate new changes so you should run and debug. Then it would work without uneccesary log errors.
 
 Use commands in NuGet website to install packages or some libraries.
+
+
+Links:
+http://localhost:5265/api/Characters?id=1&id=2 //you change port according your device
+http://localhost:5265/api/Characters 

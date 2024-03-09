@@ -1,5 +1,6 @@
 global using Microsoft.EntityFrameworkCore;
 using RickNMortyDotnetApi.Data;
+using RickNMortyDotnetApi.Middlewares;
 using RickNMortyDotnetApi.Models.Characters;
 using RickNMortyDotnetApi.Models.Episodes;
 
@@ -28,6 +29,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseMiddleware<ApiKeyAuthMiddleware>();
 app.UseAuthorization();
 app.MapControllers();
 app.Run();

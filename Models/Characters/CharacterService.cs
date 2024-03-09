@@ -14,19 +14,24 @@ public class CharacterService : ICharacterService
     }
 
 
-    public ResponseService<List<GetCharacterDto>> GetAllCharacters()
+    public ResponseService<List<GetCharacterDto>> GetAllCharacters(int pageNumber = 1, int pageSize = 1000)
     {
         var responseService = new ResponseService<List<GetCharacterDto>>();
         List<Character> Characters = _characterRepository.GetAllCharacters();
-        responseService.Data = _mapper.Map<List<GetCharacterDto>>(Characters);
+
+        var skipResults = (pageNumber - 1) * pageSize;
+
+        var paginatedCharacters = Characters.Skip(skipResults).Take(pageSize).ToList();
+
+        responseService.Data = _mapper.Map<List<GetCharacterDto>>(paginatedCharacters);
         return responseService;
     }
 
-    public ResponseService<GetCharacterDto> GetCharacterById(int id)
+    public ResponseService<List<GetCharacterDto>> GetCharacterById(List<int> id)
     {
-        var responseService = new ResponseService<GetCharacterDto>();
-        var character = _characterRepository.GetCharacterById(id);
-        responseService.Data = _mapper.Map<GetCharacterDto>(character);
+        var responseService = new ResponseService<List<GetCharacterDto>>();
+        List<Character> Characters = _characterRepository.GetCharacterById(id);
+        responseService.Data = _mapper.Map<List<GetCharacterDto>>(Characters);
         return responseService;
     }
 
