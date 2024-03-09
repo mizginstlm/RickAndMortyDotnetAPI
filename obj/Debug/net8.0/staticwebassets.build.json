@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "lBh3H2KNEsEt++AHEPity0baPZmX0lsIy8tpn7V3SA4=",
+  "Source": "RickNMortyDotnetApi",
+  "BasePath": "_content/RickNMortyDotnetApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

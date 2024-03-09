@@ -1,0 +1,7 @@
+/Users/princessbuttercup/Documents/RickNMortyDotnetApi/obj/Debug/net8.0/RickNMortyDotnetApi.csproj.AssemblyReference.cache
+/Users/princessbuttercup/Documents/RickNMortyDotnetApi/obj/Debug/net8.0/RickNMortyDotnetApi.GeneratedMSBuildEditorConfig.editorconfig
+/Users/princessbuttercup/Documents/RickNMortyDotnetApi/obj/Debug/net8.0/RickNMortyDotnetApi.AssemblyInfoInputs.cache
+/Users/princessbuttercup/Documents/RickNMortyDotnetApi/obj/Debug/net8.0/RickNMortyDotnetApi.AssemblyInfo.cs
+/Users/princessbuttercup/Documents/RickNMortyDotnetApi/obj/Debug/net8.0/RickNMortyDotnetApi.csproj.CoreCompileInputs.cache
+/Users/princessbuttercup/Documents/RickNMortyDotnetApi/obj/Debug/net8.0/RickNMortyDotnetApi.MvcApplicationPartsAssemblyInfo.cs
+/Users/princessbuttercup/Documents/RickNMortyDotnetApi/obj/Debug/net8.0/RickNMortyDotnetApi.MvcApplicationPartsAssemblyInfo.cache
